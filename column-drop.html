@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pattern Column Drop</title>
+		<style type="text/css">
+			* {
+				box-sizing: border-box;
+			}
+			html, body {
+				margin: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			.container {
+				width: 100%;
+				font-size: 0;
+			}
+
+			.box {
+
+				width: 100%;
+				height: 10rem;
+			}
+
+			.green {
+				background-color: green;
+			}
+
+			.red {
+				background-color: red;
+			}
+
+			.blue {
+				background-color: blue;
+			}
+
+			.yellow {
+				background-color: yellow;
+			}
+
+			@media screen and (min-width: 600px) {
+				.box {
+					display: inline-block;
+				}
+				.box.green {
+					width: 25%;
+					height: 20rem;
+				}
+				.box.yellow {
+					width: 75%;
+					height: 20rem;
+				}
+			}
+
+			@media screen and (min-width: 1200px) {
+				.box.yellow {
+					width : 50%;
+				}
+
+				.green, .blue, .red {
+					width: 25%;
+					height: 20rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="box green"></div>
+			<div class="box yellow"></div>
+			<div class="box red"></div>
+			<div class="box green"></div>
+			<div class="box yellow"></div>
+			<div class="box blue"></div>
+		</div>
+	</body>
+</html>
